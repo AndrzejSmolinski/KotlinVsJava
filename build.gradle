@@ -16,3 +16,11 @@ java {
         vendor.set(JvmVendorSpec.ADOPTIUM)
     }
 }
+
+tasks.withType(JavaCompile).configureEach {
+    options.compilerArgs += "--enable-preview"
+}
+
+tasks.withType(JavaExec).configureEach {
+    jvmArgs += "--enable-preview"
+}
