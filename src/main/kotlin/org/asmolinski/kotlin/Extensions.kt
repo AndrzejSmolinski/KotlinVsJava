@@ -18,17 +18,14 @@ fun main() {
     println(MemberExtension().getString("test"))
 }
 
-class DontDoThis(private val outerMember: String) {
+class Outer(private val outerMember: String) {
 
-    inner class PleaseDont(private val innerMember: String) {
+    inner class Inner(private val innerMember: String) {
 
-        fun String.nopeNopeNope() {
-            this + this@PleaseDont.innerMember + this@DontDoThis.outerMember
+        fun String.extension() {
+            this + this@Inner.innerMember + this@Outer.outerMember
         }
 
-//        fun DontDoThis.doesntWork() {
-//            this@DontDoThis + this
-//        }
     }
 }
 

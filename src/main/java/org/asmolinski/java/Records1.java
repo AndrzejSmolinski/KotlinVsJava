@@ -16,7 +16,7 @@ public class Records1 {
         System.out.println(
                 new Person1.Builder()
                         .withFirstName("Kate")
-                        .withFirstName("Smith")
+                        .withLastName("Smith")
                         .withAge(40)
                         .build()
         );

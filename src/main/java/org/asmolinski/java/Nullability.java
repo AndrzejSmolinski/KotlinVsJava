@@ -1,7 +1,5 @@
 package org.asmolinski.java;
 
-import org.jetbrains.annotations.NotNull;
-
 public class Nullability {
 
     public static void main(String[] args) {
@@ -9,6 +7,8 @@ public class Nullability {
 
         if (booleanFun()) {
            System.out.println("prawda");
+        } else {
+            System.out.println("fałsz");
         }
     }
 
