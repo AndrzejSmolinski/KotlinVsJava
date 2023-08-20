@@ -6,7 +6,7 @@ public class Nullability {
         System.out.println(stringFun().length());
 
         if (booleanFun()) {
-           System.out.println("prawda");
+            System.out.println("prawda");
         } else {
             System.out.println("fałsz");
         }
