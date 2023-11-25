@@ -13,6 +13,9 @@ fun main() {
     val fromJava = org.asmolinski.java.Collections.squaresOfEvenInts(listOf(1, 2, 3, 4, 5, 6))
     println(fromJava)
     println("Suma " + fromJava.sum())
+
+    // sequence
+    println(sequenceProcessing(listOf(1, 2, 3, 4, 5, 6)))
 }
 
 fun squaresOfEvenInts(ints: List<Int>) =
@@ -22,3 +25,10 @@ fun squaresOfEvenInts(ints: List<Int>) =
 
 fun partitionOddVsEven(ints: List<Int>) =
     ints.partition { it % 2 == 0 }
+
+fun sequenceProcessing(ints: List<Int>) =
+    ints.asSequence()
+        .map { it * it }
+        .mapIndexed { index, value ->  if (index % 2 == 0) value + 1 else value }
+        .shuffled()
+        .sum()
